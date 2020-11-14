@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="QR Code decoder">
+	<meta name="description" content="QR Code decoder">
+
+	<title>QR Code decoder</title>
+</head>
+<body>
+
+    <label for="img">Select image:</label>
+    <input type="file" id="fileInput" name="img" accept="image/*">
+    <button id="submit">Submit</button>
+
+    <div id="imgDiv">
+
+    </div>
+    </hr>
+    </hr>
+    <div style="margin-top: 100px;">Decoded content: </div>
+    <p id="content"></p>
+    <button id="copyButton">Copy To Clipboard</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript" src="lib/grid.js"></script>
+<script type="text/javascript" src="lib/version.js"></script>
+<script type="text/javascript" src="lib/detector.js"></script>
+<script type="text/javascript" src="lib/formatinf.js"></script>
+<script type="text/javascript" src="lib/errorlevel.js"></script>
+<script type="text/javascript" src="lib/bitmat.js"></script>
+<script type="text/javascript" src="lib/datablock.js"></script>
+<script type="text/javascript" src="lib/bmparser.js"></script>
+<script type="text/javascript" src="lib/datamask.js"></script>
+<script type="text/javascript" src="lib/rsdecoder.js"></script>
+<script type="text/javascript" src="lib/gf256poly.js"></script>
+<script type="text/javascript" src="lib/gf256.js"></script>
+<script type="text/javascript" src="lib/decoder.js"></script>
+<script type="text/javascript" src="lib/qrcode.js"></script>
+<script type="text/javascript" src="lib/findpat.js"></script>
+<script type="text/javascript" src="lib/alignpat.js"></script>
+<script type="text/javascript" src="lib/databr.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
