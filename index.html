@@ -11,16 +11,28 @@
 </head>
 <body>
 
-    <label for="img">Select image:</label>
-    <input type="file" id="fileInput" name="img" accept="image/*">
-    <button id="submit">Submit</button>
+    <div>
+        <label for="img">Select image:</label>
+        <input type="file" id="fileInput" name="img" accept="image/*">
+    </div>
 
-    <div id="imgDiv">
+    <div style="margin-top:20px;margin-left:50px;">OR </div>
+
+    <div style="margin-top:20px;">
+        <label for="img">URL(Doesn't support CORS):</label>
+        <input type="text" id="url" name="url" value="">
+    </div>
+
+    <div style="margin-top:20px;margin-left:50px;">
+        <button id="submit">Submit</button>
+    </div>
+
+    <div id="imgDiv" style="margin-top:20px;">
 
     </div>
     </hr>
     </hr>
-    <div style="margin-top: 100px;">Decoded content: </div>
+    <div style="margin-top:100px;">Decoded content: </div>
     <p id="content"></p>
     <button id="copyButton">Copy To Clipboard</button>
 
