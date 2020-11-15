@@ -1,6 +1,6 @@
 # qrcode-decoder
 
-Decode a QR Code
+Decode QR Code
 
 Demo link: https://dongliang3571.github.io/qrcode-decoder/
 
