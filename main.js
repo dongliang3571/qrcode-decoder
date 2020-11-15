@@ -1,5 +1,5 @@
-const fileSelector = document.getElementById('fileInput');
-fileSelector.addEventListener('change', (event) => {
+$("#fileInput").on("change", function(event) {
+    console.log("ttt");
     const file = event.target.files[0];
     const reader = new FileReader();
 
@@ -13,7 +13,7 @@ fileSelector.addEventListener('change', (event) => {
         // and is available in reader.result
         reader.readAsDataURL(file);
     }
-  });
+});
 
 $("#url").on('input', function() {
     createImgTag($(this).val());
@@ -21,8 +21,7 @@ $("#url").on('input', function() {
 });
 
 $("#copyButton").click(function() {
-    var text = document.getElementById("content").innerText;
-    navigator.clipboard.writeText(text);
+    navigator.clipboard.writeText($("#content").text());
 });
 
 function createImgTag(url) {
