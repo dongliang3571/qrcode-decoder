@@ -1,11 +1,11 @@
 const fileSelector = document.getElementById('fileInput');
 fileSelector.addEventListener('change', (event) => {
     const file = event.target.files[0];
-    const preview = document.getElementById('img');
     const reader = new FileReader();
 
     reader.addEventListener("load", function () {
         createImgTag(reader.result);
+        qrcode.decode(reader.result);
     }, false);
 
     if (file) {
@@ -15,31 +15,9 @@ fileSelector.addEventListener('change', (event) => {
     }
   });
 
-$("#submit").click(function() {
-    var file = document.getElementById('fileInput').files[0];
-    var url = $("#url").val();
-    const reader = new FileReader();
-
-    qrcode.callback = function (data) {
-        console.log(data);
-        gl = data;
-        $("#content").text(data);
-    }
-
-    reader.addEventListener("load", function () {
-        qrcode.decode(reader.result);
-    }, false);
-
-    if (file) {
-        reader.readAsDataURL(file);
-        qrcode.decode()
-    } else if (url) {
-        qrcode.decode(url);
-    }
-});
-
 $("#url").on('input', function() {
     createImgTag($(this).val());
+    qrcode.decode($(this).val());
 });
 
 $("#copyButton").click(function() {
@@ -55,4 +33,8 @@ function createImgTag(url) {
     }
 
     img.attr('src', url);
+}
+
+qrcode.callback = function (data) {
+    $("#content").text(data);
 }
